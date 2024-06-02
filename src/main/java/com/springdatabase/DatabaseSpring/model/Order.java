@@ -7,15 +7,18 @@ import jakarta.persistence.Id;
 import lombok.*;
 import java.time.LocalDate;
 
-@Data
 @Entity
 public class Order
 {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+    @Getter @Setter
     private String name;
+    @Getter @Setter
     private int number;
+    @Getter @Setter
     private LocalDate Date;
+    @Getter @Setter
     private String Customer;
 }
