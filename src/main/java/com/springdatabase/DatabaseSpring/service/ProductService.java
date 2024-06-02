@@ -1,7 +1,7 @@
-package com.springdatabase.DatabaseSpring.Service;
+package com.springdatabase.DatabaseSpring.service;
 
 import com.springdatabase.DatabaseSpring.model.Product;
-import com.springdatabase.DatabaseSpring.repo.ProductRepository;
+import com.springdatabase.DatabaseSpring.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

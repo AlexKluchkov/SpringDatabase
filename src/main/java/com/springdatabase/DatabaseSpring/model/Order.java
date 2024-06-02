@@ -14,8 +14,8 @@ public class Order
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    private String name_of_product;
-    private int number_of_product;
-    private LocalDate Date_of_Order;
+    private String name;
+    private int number;
+    private LocalDate Date;
     private String Customer;
 }

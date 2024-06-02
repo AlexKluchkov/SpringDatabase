@@ -11,7 +11,7 @@ import java.util.List;
 
 @Controller
 public class UserController {
-    @GetMapping("/getUsers")
+    @GetMapping("/Users")
     public String All_Orders() {
         return "table_of_users";
     }

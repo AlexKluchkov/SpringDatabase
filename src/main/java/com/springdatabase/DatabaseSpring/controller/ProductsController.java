@@ -1,8 +1,7 @@
 package com.springdatabase.DatabaseSpring.controller;
 
 import com.springdatabase.DatabaseSpring.model.Product;
-import com.springdatabase.DatabaseSpring.repo.ProductRepository;
-import com.springdatabase.DatabaseSpring.Service.ProductService;
+import com.springdatabase.DatabaseSpring.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ProductsController {
     @Autowired
     private ProductService product_Service;
-    @GetMapping("/getProduct")
+    @GetMapping("/Products")
     public String table_of_Product(Model model)
     {
         try {
