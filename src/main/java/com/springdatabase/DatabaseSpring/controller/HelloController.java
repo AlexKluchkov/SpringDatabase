@@ -12,12 +12,6 @@ import java.util.Map;
 @Controller
 public class HelloController {
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "dfdf";
-    }
-
     @GetMapping
     public String main_(Model model) {
         model.addAttribute("some", "let's code!");
