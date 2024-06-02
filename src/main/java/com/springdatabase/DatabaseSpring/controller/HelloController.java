@@ -12,7 +12,6 @@ public class HelloController {
 
     @GetMapping
     public String main_(Model model) {
-        model.addAttribute("some", "let's code!");
         return "main";
     }
 }
