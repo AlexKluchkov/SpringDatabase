@@ -8,17 +8,14 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
+@Getter @Setter
 public class Order
 {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    @Getter @Setter
     private String name;
-    @Getter @Setter
     private int number;
-    @Getter @Setter
     private LocalDate Date;
-    @Getter @Setter
     private String Customer;
 }
