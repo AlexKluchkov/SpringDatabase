@@ -13,19 +13,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ProductsController {
     @Autowired
     private ProductService productService;
-    @GetMapping("/Products")
+    @GetMapping("/products")
     public String allProduct(Model model)
     {
         Iterable<Product> products = productService.getAllUsers();
         model.addAttribute("products", products);
         return "table_of_products";
     }
-    @GetMapping("/NewProductRegistrationForm")
+    @GetMapping("/registrationForm")
     public String addNewProduct(Model model)
     {
         return "NewProductRegistrationForm";
     }
-    @PostMapping("/NewProductRegistrationForm")
+    @PostMapping("/registrationForm")
     public String addPostNewProduct(@RequestParam String name_of_product, @RequestParam int quantity_of_products, @RequestParam int price, Model model)
     {
         Product newProduct = new Product(name_of_product, quantity_of_products, price);
