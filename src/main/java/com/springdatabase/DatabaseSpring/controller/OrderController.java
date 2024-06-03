@@ -1,6 +1,6 @@
 package com.springdatabase.DatabaseSpring.controller;
 
-import com.springdatabase.DatabaseSpring.model.Order;
+import com.springdatabase.DatabaseSpring.entity.Order;
 import com.springdatabase.DatabaseSpring.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,13 +13,13 @@ import java.util.List;
 public class OrderController {
 
     @Autowired
-    private OrderRepository order_repository;
+    private OrderRepository orderRepository;
 
     @GetMapping("/Orders")
-    public String All_Orders(Model model) {
+    public String allOrders(Model model) {
         try {
-            List<Order> _orders = order_repository.findAll();
-            model.addAttribute("_orders", _orders);
+            List<Order> orders = orderRepository.findAll();
+            model.addAttribute("orders", orders);
             return "table_of_order";
         } catch (Exception e) {
             return "Error";
