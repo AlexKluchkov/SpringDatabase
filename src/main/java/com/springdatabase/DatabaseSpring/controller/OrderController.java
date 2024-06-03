@@ -8,17 +8,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
-
 @Controller
 public class OrderController {
 
     @Autowired
-    private OrderRepository order_repository;
+    private OrderRepository orderRepository;
 
     @GetMapping("/Orders")
-    public String All_Orders(Model model) {
+    public String allOrders(Model model) {
         try {
-            List<Order> _orders = order_repository.findAll();
+            List<Order> _orders = orderRepository.findAll();
             model.addAttribute("_orders", _orders);
             return "table_of_order";
         } catch (Exception e) {
@@ -26,3 +25,4 @@ public class OrderController {
         }
     }
 }
+
