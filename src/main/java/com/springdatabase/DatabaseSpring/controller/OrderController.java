@@ -17,12 +17,8 @@ public class OrderController {
 
     @GetMapping("/orders")
     public String allOrders(Model model) {
-        try {
-            List<Order> orders = orderRepository.findAll();
-            model.addAttribute("orders", orders);
-            return "table_of_order";
-        } catch (Exception e) {
-            return "Error";
-        }
+        List<Order> orders = orderRepository.findAll();
+        model.addAttribute("orders", orders);
+        return "table_of_order";
     }
 }
