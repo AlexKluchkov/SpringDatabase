@@ -11,8 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ProductsController {
+    private final ProductService productService;
+
     @Autowired
-    private ProductService productService;
+    public MyService(ProductService productService) {
+        this.productService = productService;
+    }
     @GetMapping("/products")
     public String allProduct(Model model)
     {
