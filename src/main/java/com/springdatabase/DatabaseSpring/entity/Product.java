@@ -16,10 +16,10 @@ public class Product {
     private int quantity;
     private int price;
     public Product(){}
-    public Product(String name_of_product, int quantity_of_products, int price)
+    public Product(String name, int quantity, int price)
     {
-        this.name = name_of_product;
-        this.quantity = quantity_of_products;
+        this.name = name;
+        this.quantity = quantity;
         this.price = price;
     }
 }
