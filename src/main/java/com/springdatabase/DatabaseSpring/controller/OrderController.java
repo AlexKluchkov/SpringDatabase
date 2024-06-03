@@ -12,8 +12,12 @@ import java.util.List;
 @Controller
 public class OrderController {
 
+    private final OrderRepository orderRepository;
+
     @Autowired
-    private OrderRepository orderRepository;
+    public MyService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 
     @GetMapping("/orders")
     public String allOrders(Model model) {
