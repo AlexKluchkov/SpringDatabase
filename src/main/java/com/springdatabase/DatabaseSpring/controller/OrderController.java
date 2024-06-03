@@ -15,7 +15,7 @@ public class OrderController {
     @Autowired
     private OrderRepository orderRepository;
 
-    @GetMapping("/Orders")
+    @GetMapping("/orders")
     public String allOrders(Model model) {
         try {
             List<Order> orders = orderRepository.findAll();
