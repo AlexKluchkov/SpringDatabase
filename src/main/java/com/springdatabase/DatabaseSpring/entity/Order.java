@@ -17,6 +17,6 @@ public class Order
     private Long id;
     private String name;
     private int number;
-    private LocalDate Date;
-    private String Customer;
+    private LocalDate date;
+    private String customer;
 }

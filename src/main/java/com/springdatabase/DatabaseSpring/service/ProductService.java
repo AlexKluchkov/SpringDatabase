@@ -9,8 +9,12 @@ import java.util.List;
 @Service
 public class ProductService
 {
+    private final ProductRepository productRepository;
+
     @Autowired
-    private ProductRepository productRepository;
+    public MyService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     public Iterable<Product> getAllUsers() {
         return productRepository.findAll();

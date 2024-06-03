@@ -12,17 +12,17 @@ import java.util.List;
 @Controller
 public class OrderController {
 
-    @Autowired
-    private OrderRepository orderRepository;
+    private final OrderRepository orderRepository;
 
-    @GetMapping("/Orders")
+    @Autowired
+    public MyService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+
+    @GetMapping("/orders")
     public String allOrders(Model model) {
-        try {
-            List<Order> orders = orderRepository.findAll();
-            model.addAttribute("orders", orders);
-            return "table_of_order";
-        } catch (Exception e) {
-            return "Error";
-        }
+        List<Order> orders = orderRepository.findAll();
+        model.addAttribute("orders", orders);
+        return "table_of_order";
     }
 }

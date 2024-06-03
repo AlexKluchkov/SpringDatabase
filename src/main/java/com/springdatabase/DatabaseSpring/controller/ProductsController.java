@@ -11,24 +11,28 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ProductsController {
+    private final ProductService productService;
+
     @Autowired
-    private ProductService productService;
-    @GetMapping("/Products")
+    public MyService(ProductService productService) {
+        this.productService = productService;
+    }
+    @GetMapping("/products")
     public String allProduct(Model model)
     {
         Iterable<Product> products = productService.getAllUsers();
         model.addAttribute("products", products);
         return "table_of_products";
     }
-    @GetMapping("/NewProductRegistrationForm")
+    @GetMapping("/registrationForm")
     public String addNewProduct(Model model)
     {
         return "NewProductRegistrationForm";
     }
-    @PostMapping("/NewProductRegistrationForm")
-    public String addPostNewProduct(@RequestParam String name_of_product, @RequestParam int quantity_of_products, @RequestParam int price, Model model)
+    @PostMapping("/registrationForm")
+    public String addPostNewProduct(@RequestParam String name, @RequestParam int quantity, @RequestParam int price, Model model)
     {
-        Product newProduct = new Product(name_of_product, quantity_of_products, price);
+        Product newProduct = new Product(name, quantity, price);
         productService.saveProduct(newProduct);
         return "";
     }
