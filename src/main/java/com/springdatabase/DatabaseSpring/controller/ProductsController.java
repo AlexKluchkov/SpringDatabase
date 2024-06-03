@@ -26,7 +26,7 @@ public class ProductsController {
         return "NewProductRegistrationForm";
     }
     @PostMapping("/registrationForm")
-    public String addPostNewProduct(@RequestParam String name_of_product, @RequestParam int quantity_of_products, @RequestParam int price, Model model)
+    public String addPostNewProduct(@RequestParam String name, @RequestParam int quantity, @RequestParam int price, Model model)
     {
         Product newProduct = new Product(name_of_product, quantity_of_products, price);
         productService.saveProduct(newProduct);
