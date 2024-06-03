@@ -11,7 +11,7 @@ import java.util.Map;
 public class HelloController {
 
     @GetMapping
-    public String main_(Model model) {
+    public String main(Model model) {
         return "main";
     }
 }
