@@ -16,5 +16,25 @@
             <column name="quantity" type="int"/>
             <column name="price" type="float "/>
         </createTable>
+        <createTable tableName="Order">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="number" type="int"/>
+            <column name="Date" type="datetime"/>
+            <column name="Customer" type="varchar(255) "/>
+        </createTable>
+        <createTable tableName="User">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="fullName" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="varchar(255)"/>
+        </createTable>
     </changeSet>
 </databaseChangeLog>
