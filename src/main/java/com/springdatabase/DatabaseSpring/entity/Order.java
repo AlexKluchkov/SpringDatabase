@@ -1,4 +1,5 @@
 package com.springdatabase.DatabaseSpring.entity;
+import com.springdatabase.DatabaseSpring.entity.enumeration.orderStatus;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,4 +20,5 @@ public class Order
     private int number;
     private LocalDate date;
     private String customer;
+    private orderStatus status;
 }
