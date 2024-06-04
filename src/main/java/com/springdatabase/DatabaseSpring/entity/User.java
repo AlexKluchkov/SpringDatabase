@@ -1,5 +1,5 @@
 package com.springdatabase.DatabaseSpring.entity;
-
+import com.springdatabase.DatabaseSpring.entity.enumeration.userRole;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,5 +15,5 @@ public class User
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     String fullName;
-    private enum role {ADMIN, FINANCIER, CLIENT};
+    private userRole role;
 }
