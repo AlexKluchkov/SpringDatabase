@@ -14,7 +14,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="quantity" type="int"/>
-            <column name="price" type="float "/>
+            <column name="price" type="float"/>
         </createTable>
         <createTable tableName="Order">
             <column name="id" type="bigint" autoIncrement="true">
@@ -25,7 +25,7 @@
             </column>
             <column name="number" type="int"/>
             <column name="Date" type="datetime"/>
-            <column name="Customer" type="varchar(255) "/>
+            <column name="Customer" type="varchar(255)"/>
         </createTable>
         <createTable tableName="User">
             <column name="id" type="bigint" autoIncrement="true">
