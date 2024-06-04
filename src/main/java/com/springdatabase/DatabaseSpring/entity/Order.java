@@ -20,5 +20,5 @@ public class Order
     private int number;
     private LocalDate date;
     private String customer;
-    private orderStatus status;
+    private OrderStatus status;
 }
