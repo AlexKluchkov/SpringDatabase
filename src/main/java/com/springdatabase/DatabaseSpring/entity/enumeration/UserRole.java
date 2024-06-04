@@ -1,8 +1,8 @@
 package com.springdatabase.DatabaseSpring.entity.enumeration;
 
-public enum orderStatus
+public enum UserRole
 {
-    WAITING,
-    ORDERED,
-    CANCELED
+    ADMIN,
+    FINANCIER,
+    CLIENT
 }
