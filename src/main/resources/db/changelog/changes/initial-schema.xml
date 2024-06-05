@@ -7,7 +7,7 @@
 
     <changeSet id="1" author="yourname">
         <createTable tableName="Product">
-            <column name="id" type="bigint" autoIncrement="true">
+            <column name="product_id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(255)">
@@ -17,7 +17,7 @@
             <column name="price" type="float"/>
         </createTable>
         <createTable tableName="Order">
-            <column name="id" type="bigint" autoIncrement="true">
+            <column name="order_id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="varchar(255)">
@@ -25,10 +25,9 @@
             </column>
             <column name="number" type="int"/>
             <column name="Date" type="datetime"/>
-            <column name="Customer" type="varchar(255)"/>
         </createTable>
         <createTable tableName="User">
-            <column name="id" type="bigint" autoIncrement="true">
+            <column name="user_id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="fullName" type="varchar(255)">
