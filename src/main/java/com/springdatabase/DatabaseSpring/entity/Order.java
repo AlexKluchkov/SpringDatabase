@@ -19,6 +19,11 @@ public class Order
     private String name;
     private int number;
     private LocalDate date;
-    private String customer;
     private OrderStatus status;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long productId;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long userId;
 }
