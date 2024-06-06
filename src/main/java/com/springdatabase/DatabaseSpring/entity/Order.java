@@ -21,4 +21,8 @@ public class Order
     private LocalDate date;
     private String customer;
     private OrderStatus status;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long productId;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long userId;
 }
