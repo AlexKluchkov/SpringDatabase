@@ -20,10 +20,6 @@ public class Order
     private int number;
     private LocalDate date;
     private OrderStatus status;
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long productId;
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long userId;
 }
