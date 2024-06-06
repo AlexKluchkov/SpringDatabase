@@ -19,7 +19,6 @@ public class Order
     private String name;
     private int number;
     private LocalDate date;
-    private String customer;
     private OrderStatus status;
     private Long productId;
     private Long userId;
