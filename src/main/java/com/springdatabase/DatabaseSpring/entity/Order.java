@@ -1,10 +1,8 @@
 package com.springdatabase.DatabaseSpring.entity;
 import com.springdatabase.DatabaseSpring.entity.enumeration.orderStatus;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.springdatabase.DatabaseSpring.entity.enumeration.OrderStatus;
+import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
 
@@ -20,6 +18,7 @@ public class Order
     private int number;
     private LocalDate date;
     private OrderStatus status;
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private Product productId;
     private User userId;
 }
