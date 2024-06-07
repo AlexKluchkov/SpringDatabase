@@ -20,6 +20,6 @@ public class Order
     private int number;
     private LocalDate date;
     private OrderStatus status;
-    private Long productId;
-    private Long userId;
+    private Product productId;
+    private User userId;
 }
