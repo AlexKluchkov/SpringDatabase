@@ -1,9 +1,6 @@
 package com.springdatabase.DatabaseSpring.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -15,6 +12,9 @@ public class Product {
     private String name;
     private int quantity;
     private int price;
+    @ManyToOne
+    @JoinColumn(name = "order_id", nullable = false)
+    private Order order;
     public Product(){}
     public Product(String name, int quantity, int price)
     {
