@@ -14,7 +14,7 @@ public class ProductsController {
     private final ProductService productService;
 
     @Autowired
-    public MyService(ProductService productService) {
+    public ProductsController(ProductService productService) {
         this.productService = productService;
     }
     @GetMapping("/products")
