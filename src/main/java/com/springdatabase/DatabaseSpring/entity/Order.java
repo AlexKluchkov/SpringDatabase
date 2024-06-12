@@ -1,7 +1,5 @@
 package com.springdatabase.DatabaseSpring.entity;
 import com.springdatabase.DatabaseSpring.entity.enumeration.orderStatus;
-
-import com.springdatabase.DatabaseSpring.entity.enumeration.OrderStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
