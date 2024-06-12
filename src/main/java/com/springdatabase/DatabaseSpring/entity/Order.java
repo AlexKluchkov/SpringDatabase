@@ -19,6 +19,6 @@ public class Order
     private LocalDate date;
     private OrderStatus status;
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private Product productId;
+    private List<Product> productId;
     private User userId;
 }
