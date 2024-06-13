@@ -15,7 +15,7 @@ public class OrderController {
     private final OrderRepository orderRepository;
 
     @Autowired
-    public MyService(OrderRepository orderRepository) {
+    public OrderController(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 

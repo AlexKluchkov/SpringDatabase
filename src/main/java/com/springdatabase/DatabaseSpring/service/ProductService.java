@@ -12,15 +12,14 @@ public class ProductService
     private final ProductRepository productRepository;
 
     @Autowired
-    public MyService(ProductRepository productRepository) {
+    public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
     public Iterable<Product> getAllUsers() {
         return productRepository.findAll();
     }
-    /*
     public void saveProduct(Product product) {
         productRepository.save(product);
-    }*/
+    }
 }
