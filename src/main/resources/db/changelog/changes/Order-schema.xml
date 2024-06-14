@@ -7,9 +7,9 @@
 
     <changeSet id="2" author="yourname">
         <addForeignKeyConstraint baseColumnNames="user_id"
-                                 baseTableName="User"
+                                 baseTableName="Order"
                                  constraintName="fk_customer_id"
-                                 referencedColumnNames="order_id"
-                                 referencedTableName="Order"/>
+                                 referencedColumnNames="id"
+                                 referencedTableName="User"/>
     </changeSet>
 </databaseChangeLog>
