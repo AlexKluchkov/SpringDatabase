@@ -6,10 +6,13 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <changeSet id="2" author="yourname">
+        <addColumn tableName="Order">
+            <column name="product_id" type="bigint"/>
+        </addColumn>
         <addForeignKeyConstraint baseColumnNames="product_id"
-                                 baseTableName="Product"
+                                 baseTableName="Order"
                                  constraintName="fk_product_id"
-                                 referencedColumnNames="order_id"
-                                 referencedTableName="Order"/>
+                                 referencedColumnNames="id"
+                                 referencedTableName="Product"/>
     </changeSet>
 </databaseChangeLog>
