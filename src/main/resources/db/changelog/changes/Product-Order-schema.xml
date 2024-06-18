@@ -10,9 +10,9 @@
             <column name="product_id" type="bigint"/>
         </addColumn>
         <addForeignKeyConstraint baseColumnNames="product_id"
-                                 baseTableName="Product"
+                                 baseTableName="Order"
                                  constraintName="fk_product_id"
-                                 referencedColumnNames="order_id"
-                                 referencedTableName="Order"/>
+                                 referencedColumnNames="id"
+                                 referencedTableName="Product"/>
     </changeSet>
 </databaseChangeLog>
