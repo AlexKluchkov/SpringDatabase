@@ -18,6 +18,5 @@ public class Order
     private OrderStatus status;
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<Product> productId;
-    @OneToOne
     private User userId;
 }
