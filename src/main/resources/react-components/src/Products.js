@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Product = () => {
+const Products = () => {
     const [data, setData] = useState('');
 
     useEffect(() => {
@@ -16,7 +16,6 @@ const Product = () => {
 
     return (
         <div>
-            <h1>Data from Spring Backend</h1>
             <table>
                     <tr>
                         <th>name of product</th>
@@ -31,9 +30,8 @@ const Product = () => {
                         <td>7</td>
                     </tr>
                 </table>
-            <p>{data}</p>
         </div>
     );
 };
 
-export default Product;
+export default Products;
