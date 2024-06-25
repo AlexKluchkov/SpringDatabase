@@ -19,4 +19,7 @@ public class UserService
     public void saveProduct(User user) {
         userRepository.save(user);
     }
+    public void deleteProduct(User user) {
+        productRepository.delete(user);
+    }
 }
