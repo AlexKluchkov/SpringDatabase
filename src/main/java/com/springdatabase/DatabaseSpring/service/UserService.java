@@ -16,10 +16,10 @@ public class UserService
     public Iterable<User> getAllUsers() {
         return userRepository.findAll();
     }
-    public void saveProduct(User user) {
+    public void saveUser(User user) {
         userRepository.save(user);
     }
-    public void deleteProduct(User user) {
-        productRepository.delete(user);
+    public void deleteUser(User user) {
+        userRepository.delete(user);
     }
 }
